@@ -108,3 +108,10 @@ body {
   background-image: url(./bg.jpg);
   background-position: center;
 }
+
+.dropdown:hover > .dropdown-menu,
+.dropend:hover > .dropdown-menu {
+  display: block;
+  margin-top: 0.125em;
+  margin-left: 0.125em;
+}
