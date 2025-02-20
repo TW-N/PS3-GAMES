@@ -1,54 +1,59 @@
-body{
-	background-image: url('ksa.png');
-background-size: cover;
-margin: 0;
+.container ul{
+  list-style:none;
+  padding:0;
+  margin:0;
 }
-ul{
-	list-style: none;
-	margin: 0;
-	padding: 0;
-	}
-	ul li{
-		width: 190px;
-		height: 50px;
-		background-color: #000;
-		font-size: 20px;
-		display: inline-block;
-		text-align: center;
-		line-height: 50px;
-		opacity: 0.9;
-		float: left;
+.container li{position:relative;}
+.container a{
+  display:block;
+  padding:3px 12px;
+  height:24px;
+  line-height:24px;
+  text-decoration:none;
+  white-space:nowrap;
+  background:#fff;
+  color:#5a6063;
 }
-		ul li a{
-			text-decoration: none;
-			color: #fff;
-			display: block;
-			}
-			ul li a:hover{
-				background-color: #EA5452;
-	 		transition-duration: .2s; 
-	}
-				
-ul li ul li{
-	display: none;
-	}
-	ul li:hover ul li{
-		display: block;
-	}
-	.momo{
-	color: red;
-	background-color: #181818;
-	margin: 0;
-	display: inline-block;
-	padding: 60px;
-	font-size: 20px;
-	opacity: 1.0;
-		}
-		.baba{
-			font-size: 17px;
-			} 
-			.plp{
-				font-size: 12px;
-        section{
-			text-align: center;
-			} 
+.container a:hover{
+  background:#c0c0c0;
+  color:#fff;
+}
+.menu{
+  position:relative;
+  *zoom:1;
+}
+.menu:after, .menu:before{
+  content:'';
+  display:table;
+  line-height:0;
+}
+.menu:after{clear:both;}
+.menu > li{
+  float:left;
+  margin-right:4px;
+  border:1px solid #fafafa;
+}
+.menu > li:last-child{margin-right:0;}
+.sub-menu, .sub-sub-menu{
+  border:1px solid #fafafa;
+  border-top:0 none;
+}
+.sub-menu li{border-top:1px solid #fafafa;}
+.sub-menu, .sub-sub-menu{
+  position:absolute;
+  left:-999em;
+}
+.sub-menu{top:30px;}
+.sub-sub-menu{top:-1px;}
+.menu > li:hover .sub-menu{left:0;}
+.sub-menu > li:hover .sub-sub-menu{left:100%;}
+.container .arrow:after{
+  content:'\00BB';
+  position:absolute;
+  right:3px;
+  top:0;
+  height:30px;
+  line-height:30px;
+}
+.container .arrow:hover{color:#fff;}
+.container .arrow > a{padding-right:20px;}
